@@ -16,11 +16,18 @@
 		</div>
 
 		<div>
-			<div id="progress" style="width:500px;border:none;text-align:center;"></div>
-			<span id="downloadingInfos"></span>
+			<div id="progress"></div>
+			<span id="downloadingInfos">Size: 5.00MiB</span>
 		</div>
 
+		<div>
+			<a href='download.php?video=wowVideo.mp3'>Get Song</a>
+		</div>
+
+
+<!--
 <?php
+/*
 $url = $_POST['videourl'];
 
 if (isset($url)) {
@@ -60,15 +67,6 @@ if (isset($url)) {
 
 	    ob_flush();
     	
-    	/*
-	    if ($speed) {
-	        echo "; Speed: $speed";
-	    }
-	    if ($eta) {
-	        echo "; ETA: $eta";
-	    }
-	    */
-
 	    
 	    // Will print: Percentage: 21.3%; Size: 4.69MiB; Speed: 4.47MiB/s; ETA: 00:01
 	});
@@ -87,7 +85,9 @@ if (isset($url)) {
 		document.getElementById("progress").innerHTML="<div style=\"width:100%;background-color:#ddd;\">Process completed</div>";
 	</script>';
 }
+*/
 ?>
+-->
 
 	</body>
 </html>
