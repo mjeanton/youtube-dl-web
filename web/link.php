@@ -13,26 +13,26 @@ use YoutubeDl\YoutubeDl;
 
 	<body>
 
-		<form method="POST" action="">
-			<input type="text" name="videourl">
-			<button>Submit</button>
-		</form>
+		<div>
+			<form method="POST" action="">
+				<input type="text" name="videourl">
+				<button>Submit</button>
+			</form>
+		</div>
 
-		<br />
-
-		<p id="downloadingInfos"></p>
-
-		<div id="progress" style="width:500px;border:none;text-align:center;"></div>
-		<br />
+		<div>
+			<div id="progress" style="width:500px;border:none;text-align:center;"></div>
+			<span id="downloadingInfos"></span>
+		</div>
 
 <?php
+$url = $_POST['videourl'];
+
+if (isset($url)) {
 	ob_implicit_flush(true);
 	ob_start();
 
-	$url = $_POST['videourl'];
-
-	if ($url) {
-		$dl = new YoutubeDl([
+	$dl = new YoutubeDl([
 	    'extract-audio' => true,
 	    'audio-format' => 'mp3',
 	    'audio-quality' => 0, // best
@@ -52,10 +52,10 @@ use YoutubeDl\YoutubeDl;
 	    ob_flush();
 
 	    if ($speed && $eta) {
-	        $paragraphContent="Percentage: $percentage; Size: $size; Speed : $speed; Temps restant : $eta";
+	        $paragraphContent="Size: $size; Speed : $speed; Temps restant : $eta";
 	    }
 	    else {
-	        $paragraphContent="Percentage: $percentage; Size: $size";
+	        $paragraphContent="Size: $size";
 	    }
 
 	    echo '<script language="javascript">
@@ -79,25 +79,19 @@ use YoutubeDl\YoutubeDl;
 	});
 
 	$video = $dl->download($url);
-	$videoTitle = $video->getTitle();
-	$videoLink = $video->getFile();
+
 	$videoFilename = $video->getFilename();
 
-	echo '<br />';
-
-	//echo "<a href='" . $videoLink . "'>Get song</a><br />";
-	echo $videoFilename;
+	echo '<div>';
 	echo "<a href='download.php?video=" . $videoFilename . "'>Get song</a><br />";
+	echo '</div>';
 
 	ob_end_flush();
 
 	echo '<script language="javascript">
-		document.getElementById("progress").innerHTML="<div style=\"width:500px;background-color:#ddd;\">Process completed</div>";
+		document.getElementById("progress").innerHTML="<div style=\"width:100%;background-color:#ddd;\">Process completed</div>";
 	</script>';
-
-
-	}
-
+}
 ?>
 
 	</body>
