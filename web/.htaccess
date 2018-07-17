@@ -1,4 +1,0 @@
-AuthUserFile /home/www/project.local/www/.htpasswd
-AuthName "Accès protege"
-AuthType Basic
-Require valid-user
