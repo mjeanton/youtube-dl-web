@@ -14,7 +14,7 @@ html {
 body {
 	margin: 0 auto;
 
-	width: 700px;
+	min-width: 600px;
 
 	border: none;
 
@@ -33,6 +33,13 @@ header {
 
 	border: none;
 	border-bottom: 3px dashed;
+}
+
+header img {
+	height: 44px;
+	width: 198px;
+
+	border: none;
 }
 
 .defineLink {

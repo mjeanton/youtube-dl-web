@@ -9,7 +9,8 @@
 	<body>
 
 		<header>
-			YouTube Music
+			<img src="./images/yt_logo_mono_light.png"><br />
+			Music DL
 		</header>
 
 		<div class="defineLink">
