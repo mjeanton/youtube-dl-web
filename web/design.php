@@ -8,22 +8,37 @@
 
 	<body>
 
-		<div>
+		<header>
+			YouTube Music
+		</header>
+
+		<div class="defineLink">
 			<form method="POST" action="">
-				<input type="text" name="videourl">
-				<button>Submit</button>
+				<input type="text" name="videourl"><br />
+				<button>Télécharger</button>
 			</form>
 		</div>
 
-		<div>
-			<div id="progress"></div>
-			<span id="downloadingInfos">Size: 5.00MiB</span>
+		<div class="download">
+			<div id="barContainer">
+				<div id="progress">54%</div>
+			</div>
+			<span id="downloadingInfos">Taille: 5.00MiB</span>
 		</div>
 
-		<div>
-			<a href='download.php?video=wowVideo.mp3'>Get Song</a>
+		<div class="getLink">
+			<form method="GET" action="download.php?video=wowVideo.mp3">
+				<button>GET SONG!</button>
+			</form>
 		</div>
 
+		<footer>
+			<span>YouTube music downloader</span><br />
+			<span>By Milan J</span>
+		</footer>
+
+	</body>
+</html>
 
 <!--
 <?php
@@ -88,6 +103,3 @@ if (isset($url)) {
 */
 ?>
 -->
-
-	</body>
-</html>

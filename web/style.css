@@ -4,13 +4,170 @@
 	padding: 0;
 }
 
+html {
+	border: none;
+	background-color: black;
+
+	font-family: verdana;
+}
+
 body {
-	width: 700px;
 	margin: 0 auto;
+
+	width: 700px;
+
+	border: none;
+
+	background-color: silver;
+}
+
+header {
+	margin: 5px;
+	margin-bottom: 20px;
+
+	padding: 5px;
+
+	text-align: center;
+
+	font-size: 32px;
+
+	border: none;
+	border-bottom: 3px dashed;
+}
+
+.defineLink {
+	margin: 5px;
+	margin-bottom: 30px;
+
+	text-align: center;
+	
+	border: none;
+}
+
+.defineLink form {
+	padding: 5px;
+	
+	border: none;
+}
+
+.defineLink input {
+	margin: 5px;
+	margin-bottom: 10px;
+
+	padding: 5px;
+
+	width: 400px;
+
+	font-size: 18px;
+	color: #575757;
+
+	border: none;
+}
+
+.defineLink button {
+	padding: 5px 25px;
+
+	border: none;
+	border-radius: 5px;
+
+	font-weight: bold;
+	color: white;
+	background-color: #00e7f4;
+}
+
+.defineLink button:hover {
+	background-color: #20b3bc;
+
+	cursor: pointer;
+}
+
+.download {
+	margin: 5px;
+
+	text-align: center;
+
+	border: none;
+
+	font-family: consolas;
+}
+
+.download span {
+	border: none;
+}
+
+#barContainer {
+	margin: 0 auto;
+
+	padding: 5px;
+
+	height: 23px;
+	width: 500px;
+
+	border: none;
+	border-radius: 10px;
+
+	background-color: #555;
 }
 
 #progress {
-	width: 500px;
+	height: 100%;
+	width: 58%;
+
 	border: none;
+	border-radius: 5px;
+
+	color: #f1f1f1;
+	background-color: #00eb03;
+}
+
+.getLink {
+	margin: 0 auto;
+	margin: 5px;
+	margin-bottom: 30px;
+
+	border: none;
+
 	text-align: center;
+}
+
+.getLink form {
+	margin: 5px;
+
+	border: none;
+}
+
+.getLink button {
+	margin: 5px;
+
+	padding: 12px 40px;
+
+	border: none;
+	border-radius: 5px;
+
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	background-color: #ff0000;
+}
+
+.getLink button:hover {
+	background-color: #ca0909;
+
+	cursor: pointer;
+}
+
+footer {
+	margin: 0 auto;
+	margin: 5px;
+
+	padding: 10px;
+
+	border: none;
+	border-top: 3px dashed black;
+
+	text-align: center;
+}
+
+footer span {
+	border: none;
 }
